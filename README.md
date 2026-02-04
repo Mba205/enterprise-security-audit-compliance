@@ -1,247 +1,185 @@
-Enterprise Security Audit & Compliance Case Study
+# Enterprise Security Audit & Compliance Case Study
 
-Author: Mba Nonna
-Domain: Governance, Risk & Compliance (GRC)
-Frameworks: NIST CSF, NIST SP 800-30, ISO/IEC 27001, SOC 2
+## 1. Overview
 
-Executive Summary
+This repository presents an **Enterprise Security Audit & Compliance Case Study** conducted as part of formal Governance, Risk, and Compliance (GRC) training. The engagement assessed the security posture of two critical enterprise systems:
 
-This repository documents an Enterprise Security Audit & Compliance Case Study conducted as part of formal Governance, Risk, and Compliance (GRC) training. The engagement assessed the security posture of two critical enterprise systems:
+- Microsoft Exchange Server
+- Cisco AnyConnect VPN
 
-Microsoft Exchange Server
+A **risk-based audit methodology aligned with NIST SP 800-30** was applied, with findings mapped to **NIST Cybersecurity Framework (CSF)**, **ISO/IEC 27001**, and **SOC 2 Trust Services Criteria**.
 
-Cisco AnyConnect VPN
+## 2. Engagement Objectives
 
-A risk-based audit methodology aligned with NIST SP 800-30 was applied, with findings mapped to NIST CSF, ISO/IEC 27001, and SOC 2 Trust Services Criteria.
+The objectives of the engagement were to:
 
-The objective was to identify material risks, evaluate control effectiveness, assess compliance alignment, and provide actionable remediation recommendations reflective of real-world enterprise security and consulting practices.
+- Identify threats and vulnerabilities affecting critical systems
+- Assess risk likelihood and business impact
+- Evaluate control effectiveness
+- Identify compliance gaps
+- Provide prioritized remediation recommendations
 
-Engagement Scope
-In-Scope Systems
+## 3. Scope Definition
 
-Microsoft Exchange Server (enterprise email infrastructure)
+### 3.1 In-Scope Systems
 
-Cisco AnyConnect VPN (secure remote access)
+- Microsoft Exchange Server (enterprise email)
+- Cisco AnyConnect VPN (secure remote access)
 
-Out of Scope
+### 3.2 Out-of-Scope Items
 
-End-user devices
+- End-user devices
+- Physical security controls
+- Third-party SaaS platforms not directly integrated
 
-Physical security
+## 4. Business Context
 
-Third-party SaaS platforms not directly integrated
+The organization operates a **hybrid work environment**, making email and VPN access **high-impact assets**. Compromise of these systems would directly affect:
 
-Objectives
+- Business continuity
+- Data confidentiality
+- Organizational trust
+- Regulatory posture
 
-Identify threats and vulnerabilities affecting critical systems
+## 5. Audit Lifecycle
 
-Assess likelihood and business impact of identified risks
+The audit followed a structured enterprise lifecycle:
 
-Evaluate control effectiveness
+1. Planning and scoping  
+2. Asset identification and classification  
+3. Threat and vulnerability identification  
+4. Risk analysis and evaluation  
+5. Control assessment and gap analysis  
+6. Compliance mapping  
+7. Reporting and remediation planning  
 
-Map findings to recognized security frameworks
+## 6. Asset Identification and Classification
 
-Recommend prioritized remediation actions
+| Asset | Classification |
+|-----|---------------|
+| Microsoft Exchange Server | High impact |
+| VPN Infrastructure | High impact |
+| User Credentials | High impact |
+| Email Data | High impact |
 
-Business Context
+## 7. Threat Identification
 
-The assessed environment represents a mid-sized organization operating a hybrid work model. Email communication and VPN access were classified as high-impact assets due to their role in:
+Threat modeling considered:
 
-Business operations
+- Credential theft (phishing, brute-force)
+- Unauthorized remote access
+- Exploitation of known vulnerabilities
+- Insider misuse
+- Service availability disruptions
 
-Secure communications
+## 8. Risk Assessment Methodology
 
-Remote workforce enablement
+Risks were assessed using a qualitative model aligned with **NIST SP 800-30**.
 
-Access to internal resources
+| Factor | Description |
+|------|------------|
+| Likelihood | Probability of occurrence |
+| Impact | Business and security impact |
+| Risk Rating | Combined assessment |
 
-A security incident impacting these systems would materially affect confidentiality, availability, and organizational trust.
+## 9. Findings – Microsoft Exchange Server
 
-Audit Lifecycle
+### 9.1 EX-01: Weak Authentication Controls
 
-The engagement followed a structured enterprise audit lifecycle:
+- **Threat:** Credential compromise
+- **Vulnerability:** Inconsistent MFA enforcement
+- **Impact:** Unauthorized email access
+- **Likelihood:** Medium
+- **Risk Rating:** High
 
-Planning and scoping
+### 9.2 EX-02: Patch Management Gaps
 
-Asset identification and classification
+- **Threat:** Exploitation of known vulnerabilities
+- **Vulnerability:** Delayed patch deployment
+- **Impact:** System compromise
+- **Likelihood:** Medium
+- **Risk Rating:** Medium–High
 
-Threat and vulnerability identification
+## 10. Findings – Cisco AnyConnect VPN
 
-Risk analysis and evaluation
+### 10.1 VPN-01: Unauthorized Remote Access
 
-Control assessment and gap analysis
+- **Threat:** Credential abuse
+- **Vulnerability:** Inadequate access review processes
+- **Impact:** Internal network exposure
+- **Likelihood:** Medium
+- **Risk Rating:** Medium
 
-Compliance mapping
+### 10.2 VPN-02: Insufficient Authentication Monitoring
 
-Reporting and remediation planning
+- **Threat:** Undetected credential attacks
+- **Vulnerability:** Limited logging and alerting
+- **Impact:** Delayed detection and response
+- **Likelihood:** Medium
+- **Risk Rating:** Medium
 
-This lifecycle aligns with industry GRC and internal audit best practices.
+## 11. Consolidated Risk Register
 
-Asset Identification and Classification
-Asset	Description	Impact Level
-Microsoft Exchange Server	Enterprise email system	High
-VPN Infrastructure	Secure remote access gateway	High
-User Credentials	Authentication assets	High
-Email Data	Sensitive organizational communications	High
-Threat Modeling Overview
+| Risk ID | System | Risk Rating |
+|-------|-------|-------------|
+| EX-01 | Exchange | High |
+| EX-02 | Exchange | Medium–High |
+| VPN-01 | VPN | Medium |
+| VPN-02 | VPN | Medium |
 
-Threat identification considered:
+## 12. Control Gaps
 
-Credential theft (phishing, brute-force)
+Identified control gaps included:
 
-Unauthorized remote access
+- Inconsistent MFA enforcement
+- Lack of formal access reviews
+- Authentication logs not actively monitored
+- Limited incident response coverage for credential attacks
 
-Exploitation of unpatched vulnerabilities
+## 13. Compliance Alignment
 
-Insider misuse
+### 13.1 NIST Cybersecurity Framework
 
-Service disruption
+- ID.RA – Risk Assessment
+- PR.AC – Identity and Access Management
+- DE.CM – Continuous Monitoring
 
-Threats were mapped to assets and evaluated against existing controls.
+### 13.2 ISO/IEC 27001
 
-Risk Assessment Methodology
+- A.5 – Information Security Policies
+- A.8 – Asset Management
+- A.9 – Access Control
+- A.12 – Operations Security
 
-Risks were evaluated using a qualitative model aligned with NIST SP 800-30.
+### 13.3 SOC 2 Trust Services Criteria
 
-Factor	Description
-Likelihood	Probability of threat occurrence
-Impact	Business and security impact
-Risk Rating	Likelihood × Impact
-Key Findings – Microsoft Exchange Server
-EX-01: Weak Authentication Enforcement
+- Security
+- Availability
 
-Threat: Credential compromise
+## 14. Risk Treatment Summary
 
-Vulnerability: Inconsistent MFA enforcement
+Recommended actions included:
 
-Impact: Unauthorized email access
+- Enforce MFA across all systems
+- Implement structured patch management
+- Apply least-privilege access
+- Enhance centralized logging and monitoring
+- Formalize access review and incident response processes
 
-Likelihood: Medium
+## 15. Deliverables
 
-Risk Rating: High
+- Enterprise risk assessment
+- Enterprise IT audit report
+- Risk register
+- Compliance mapping
+- Remediation roadmap
 
-EX-02: Patch Management Delays
+## 16. Supporting Audit Artifacts
 
-Threat: Exploitation of known vulnerabilities
+- 📄 [Enterprise Risk Assessment – Exchange & VPN](artifacts/enterprise-risk-assessment-exchange-vpn.pdf)
+- 📄 [Enterprise IT Audit – Exchange & VPN](artifacts/enterprise-it-audit-exchange-vpn.pdf)
 
-Vulnerability: Delayed patch deployment
+## 17. References
 
-Impact: System compromise
+See `references/standards-and-frameworks.md` for the complete list of authoritative standards and sources.
 
-Likelihood: Medium
-
-Risk Rating: Medium–High
-
-Key Findings – Cisco AnyConnect VPN
-VPN-01: Unauthorized Remote Access
-
-Threat: Credential abuse
-
-Vulnerability: Limited access review processes
-
-Impact: Internal network exposure
-
-Likelihood: Medium
-
-Risk Rating: Medium
-
-VPN-02: Insufficient Authentication Monitoring
-
-Threat: Undetected credential attacks
-
-Vulnerability: Limited logging and alerting
-
-Impact: Delayed incident response
-
-Likelihood: Medium
-
-Risk Rating: Medium
-
-Consolidated Risk Register
-ID	System	Risk Description	Likelihood	Impact	Rating
-EX-01	Exchange	MFA enforcement gaps	Medium	High	High
-EX-02	Exchange	Patch management delays	Medium	High	Medium–High
-VPN-01	VPN	Unauthorized remote access	Medium	Medium	Medium
-VPN-02	VPN	Insufficient auth monitoring	Medium	Medium	Medium
-Control Gap Summary
-
-Identified gaps included:
-
-Inconsistent MFA enforcement
-
-Lack of formal access review schedules
-
-Logging enabled but not actively monitored
-
-Incident response procedures lacking authentication-specific workflows
-
-Compliance Mapping Summary
-NIST Cybersecurity Framework
-
-ID.RA – Risk Assessment
-
-PR.AC – Identity and Access Management
-
-DE.CM – Continuous Monitoring
-
-ISO/IEC 27001
-
-A.5 – Information Security Policies
-
-A.8 – Asset Management
-
-A.9 – Access Control
-
-A.12 – Operations Security
-
-SOC 2 Trust Services Criteria
-
-Security
-
-Availability
-
-Risk Treatment Overview
-
-Recommended treatment actions included:
-
-Enforce MFA across all users and administrators
-
-Implement structured patch management cycles
-
-Apply least-privilege access controls
-
-Enhance centralized logging and monitoring
-
-Formalize access reviews and incident response procedures
-
-Deliverables
-
-Enterprise risk assessment
-
-Enterprise IT audit report
-
-Risk register and prioritization
-
-Compliance alignment documentation
-
-Remediation roadmap
-
-Lessons Learned
-
-Credential-based attacks remain a primary enterprise threat
-
-MFA significantly reduces attack surface
-
-Compliance mapping improves stakeholder communication
-
-Continuous monitoring is critical for early detection
-
-Supporting Audit Artifacts
-
-📄 Enterprise Risk Assessment – Exchange & VPN
-
-📄 Enterprise IT Audit – Exchange & VPN
-
-References
-
-See references/standards-and-frameworks.md for the complete list of authoritative standards and sources.
